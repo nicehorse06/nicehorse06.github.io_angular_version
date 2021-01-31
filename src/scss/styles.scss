@@ -1,15 +1,20 @@
-// Import variables (overrides Bootstrap defaults)
+// Import variables
 @import "./variables.scss";
 
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
 
-// Import custom styles
+// Global CSS
 @import "./global.scss";
-@import "./divider.scss";
-@import "./buttons.scss";
-@import "./navbar.scss";
-@import "./masthead.scss";
-@import "./portfolio.scss";
-@import "./contact.scss";
-@import "./footer.scss";
+
+// Components
+@import "./components/buttons.scss";
+@import "./components/navbar.scss";
+
+// Sections
+@import "./sections/masthead.scss";
+@import "./sections/portfolio.scss";
+@import "./sections/timeline.scss";
+@import "./sections/team.scss";
+@import "./sections/contact.scss";
+@import "./sections/footer.scss";

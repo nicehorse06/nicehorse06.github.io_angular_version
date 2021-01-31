@@ -8,9 +8,8 @@ html(lang='en')
         meta(name='description', content='')
         meta(name='author', content='')
 
-        title Freelancer - Start Bootstrap Theme
+        title Agency - Start Bootstrap Theme
 
-        // Favicon
         link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
 
         // Font Awesome icons (free version)
@@ -18,7 +17,8 @@ html(lang='en')
 
         // Google fonts
         link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
-        link(href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
 
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
@@ -26,361 +26,423 @@ html(lang='en')
     body#page-top
 
         // Navigation
-        nav#mainNav.navbar.navbar-expand-lg.bg-secondary.text-uppercase.fixed-top
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
             .container
-                a.navbar-brand.js-scroll-trigger(href='#page-top') Start Bootstrap
-                button.navbar-toggler.navbar-toggler-right.text-uppercase.font-weight-bold.bg-primary.text-white.rounded(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                    | Menu 
-                    i.fas.fa-bars
+                a.navbar-brand.js-scroll-trigger(href='#page-top')
+                    img(src='assets/img/navbar-logo.svg', alt='')
+                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.fas.fa-bars.ml-1
                 #navbarResponsive.collapse.navbar-collapse
-                    ul.navbar-nav.ml-auto
-                        li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='#portfolio') Portfolio
-                        li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='#about') About
-                        li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='#contact') Contact
-
+                    ul.navbar-nav.text-uppercase.ml-auto
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='#services') Services
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='#portfolio') Portfolio
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='#about') About
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='#team') Team
+                        li.nav-item
+                            a.nav-link.js-scroll-trigger(href='#contact') Contact
         // Masthead
-        header.masthead.bg-primary.text-white.text-center
-            .container.d-flex.align-items-center.flex-column
-                // Masthead Avatar Image
-                img.masthead-avatar.mb-5(src='assets/img/avataaars.svg', alt='')
-                // Masthead Heading
-                h1.masthead-heading.text-uppercase.mb-0 Start Bootstrap
-                // Icon Divider
-                .divider-custom.divider-light
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // Masthead Subheading
-                p.masthead-subheading.font-weight-light.mb-0 Graphic Artist - Web Designer - Illustrator
-
-        // Portfolio Section
-        section#portfolio.page-section.portfolio
+        header.masthead
             .container
-                // Portfolio Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Portfolio
-                // Icon Divider
-                .divider-custom
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // Portfolio Grid Items
-                .row.justify-content-center
-                    // Portfolio Item 1
-                    .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal1')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/cabin.png', alt='')
-                    // Portfolio Item 2
-                    .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal2')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/cake.png', alt='')
-                    // Portfolio Item 3
-                    .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal3')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/circus.png', alt='')
-                    // Portfolio Item 4
-                    .col-md-6.col-lg-4.mb-5.mb-lg-0
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal4')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/game.png', alt='')
-                    // Portfolio Item 5
-                    .col-md-6.col-lg-4.mb-5.mb-md-0
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal5')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/safe.png', alt='')
-                    // Portfolio Item 6
-                    .col-md-6.col-lg-4
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal6')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/submarine.png', alt='')
+                .masthead-subheading Welcome To Our Studio!
+                .masthead-heading.text-uppercase It's Nice To Meet You
+                a.btn.btn-primary.btn-xl.text-uppercase.js-scroll-trigger(href='#services') Tell Me More
 
-        // About Section
-        section#about.page-section.bg-primary.text-white.mb-0
+        // Services
+        section#services.page-section
             .container
-                // About Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-white About
-                // Icon Divider
-                .divider-custom.divider-light
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // About Section Content
+                .text-center
+                    h2.section-heading.text-uppercase Services
+                    h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+                .row.text-center
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            i.fas.fa-circle.fa-stack-2x.text-primary
+                            i.fas.fa-shopping-cart.fa-stack-1x.fa-inverse
+                        h4.my-3 E-Commerce
+                        p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            i.fas.fa-circle.fa-stack-2x.text-primary
+                            i.fas.fa-laptop.fa-stack-1x.fa-inverse
+                        h4.my-3 Responsive Design
+                        p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            i.fas.fa-circle.fa-stack-2x.text-primary
+                            i.fas.fa-lock.fa-stack-1x.fa-inverse
+                        h4.my-3 Web Security
+                        p.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+
+        // Portfolio Grid
+        section#portfolio.page-section.bg-light
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Portfolio
+                    h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
                 .row
-                    .col-lg-4.ml-auto
-                        p.lead
-                            | Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.
-                    .col-lg-4.mr-auto
-                        p.lead
-                            | You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!
-                // About Section Button
-                .text-center.mt-4
-                    a.btn.btn-xl.btn-outline-light(href='https://startbootstrap.com/theme/freelancer/')
-                        i.fas.fa-download.mr-2
-                        | Free Download!
+                    .col-lg-4.col-sm-6.mb-4
+                        .portfolio-item
+                            a.portfolio-link(data-toggle='modal', href='#portfolioModal1')
+                                .portfolio-hover
+                                    .portfolio-hover-content
+                                        i.fas.fa-plus.fa-3x
+                                img.img-fluid(src='assets/img/portfolio/01-thumbnail.jpg', alt='')
+                            .portfolio-caption
+                                .portfolio-caption-heading Threads
+                                .portfolio-caption-subheading.text-muted Illustration
+                    .col-lg-4.col-sm-6.mb-4
+                        .portfolio-item
+                            a.portfolio-link(data-toggle='modal', href='#portfolioModal2')
+                                .portfolio-hover
+                                    .portfolio-hover-content
+                                        i.fas.fa-plus.fa-3x
+                                img.img-fluid(src='assets/img/portfolio/02-thumbnail.jpg', alt='')
+                            .portfolio-caption
+                                .portfolio-caption-heading Explore
+                                .portfolio-caption-subheading.text-muted Graphic Design
+                    .col-lg-4.col-sm-6.mb-4
+                        .portfolio-item
+                            a.portfolio-link(data-toggle='modal', href='#portfolioModal3')
+                                .portfolio-hover
+                                    .portfolio-hover-content
+                                        i.fas.fa-plus.fa-3x
+                                img.img-fluid(src='assets/img/portfolio/03-thumbnail.jpg', alt='')
+                            .portfolio-caption
+                                .portfolio-caption-heading Finish
+                                .portfolio-caption-subheading.text-muted Identity
+                    .col-lg-4.col-sm-6.mb-4.mb-lg-0
+                        .portfolio-item
+                            a.portfolio-link(data-toggle='modal', href='#portfolioModal4')
+                                .portfolio-hover
+                                    .portfolio-hover-content
+                                        i.fas.fa-plus.fa-3x
+                                img.img-fluid(src='assets/img/portfolio/04-thumbnail.jpg', alt='')
+                            .portfolio-caption
+                                .portfolio-caption-heading Lines
+                                .portfolio-caption-subheading.text-muted Branding
+                    .col-lg-4.col-sm-6.mb-4.mb-sm-0
+                        .portfolio-item
+                            a.portfolio-link(data-toggle='modal', href='#portfolioModal5')
+                                .portfolio-hover
+                                    .portfolio-hover-content
+                                        i.fas.fa-plus.fa-3x
+                                img.img-fluid(src='assets/img/portfolio/05-thumbnail.jpg', alt='')
+                            .portfolio-caption
+                                .portfolio-caption-heading Southwest
+                                .portfolio-caption-subheading.text-muted Website Design
+                    .col-lg-4.col-sm-6
+                        .portfolio-item
+                            a.portfolio-link(data-toggle='modal', href='#portfolioModal6')
+                                .portfolio-hover
+                                    .portfolio-hover-content
+                                        i.fas.fa-plus.fa-3x
+                                img.img-fluid(src='assets/img/portfolio/06-thumbnail.jpg', alt='')
+                            .portfolio-caption
+                                .portfolio-caption-heading Window
+                                .portfolio-caption-subheading.text-muted Photography
 
-        // Contact Section
+        // About
+        section#about.page-section
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase About
+                    h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+                ul.timeline
+                    li
+                        .timeline-image
+                            img.rounded-circle.img-fluid(src='assets/img/about/1.jpg', alt='')
+                        .timeline-panel
+                            .timeline-heading
+                                h4 2009-2011
+                                h4.subheading Our Humble Beginnings
+                            .timeline-body
+                                p.text-muted
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                    li.timeline-inverted
+                        .timeline-image
+                            img.rounded-circle.img-fluid(src='assets/img/about/2.jpg', alt='')
+                        .timeline-panel
+                            .timeline-heading
+                                h4 March 2011
+                                h4.subheading An Agency is Born
+                            .timeline-body
+                                p.text-muted
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                    li
+                        .timeline-image
+                            img.rounded-circle.img-fluid(src='assets/img/about/3.jpg', alt='')
+                        .timeline-panel
+                            .timeline-heading
+                                h4 December 2012
+                                h4.subheading Transition to Full Service
+                            .timeline-body
+                                p.text-muted
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                    li.timeline-inverted
+                        .timeline-image
+                            img.rounded-circle.img-fluid(src='assets/img/about/4.jpg', alt='')
+                        .timeline-panel
+                            .timeline-heading
+                                h4 July 2014
+                                h4.subheading Phase Two Expansion
+                            .timeline-body
+                                p.text-muted
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+                    li.timeline-inverted
+                        .timeline-image
+                            h4
+                                | Be Part
+                                br
+                                | Of Our
+                                br
+                                | Story!
+
+        // Team
+        section#team.page-section.bg-light
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Our Amazing Team
+                    h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+                .row
+                    .col-lg-4
+                        .team-member
+                            img.mx-auto.rounded-circle(src='assets/img/team/1.jpg', alt='')
+                            h4 Kay Garland
+                            p.text-muted Lead Designer
+                            a.btn.btn-dark.btn-social.mx-2(href='#!')
+                                i.fab.fa-twitter
+                            a.btn.btn-dark.btn-social.mx-2(href='#!')
+                                i.fab.fa-facebook-f
+                            a.btn.btn-dark.btn-social.mx-2(href='#!')
+                                i.fab.fa-linkedin-in
+                    .col-lg-4
+                        .team-member
+                            img.mx-auto.rounded-circle(src='assets/img/team/2.jpg', alt='')
+                            h4 Larry Parker
+                            p.text-muted Lead Marketer
+                            a.btn.btn-dark.btn-social.mx-2(href='#!')
+                                i.fab.fa-twitter
+                            a.btn.btn-dark.btn-social.mx-2(href='#!')
+                                i.fab.fa-facebook-f
+                            a.btn.btn-dark.btn-social.mx-2(href='#!')
+                                i.fab.fa-linkedin-in
+                    .col-lg-4
+                        .team-member
+                            img.mx-auto.rounded-circle(src='assets/img/team/3.jpg', alt='')
+                            h4 Diana Petersen
+                            p.text-muted Lead Developer
+                            a.btn.btn-dark.btn-social.mx-2(href='#!')
+                                i.fab.fa-twitter
+                            a.btn.btn-dark.btn-social.mx-2(href='#!')
+                                i.fab.fa-facebook-f
+                            a.btn.btn-dark.btn-social.mx-2(href='#!')
+                                i.fab.fa-linkedin-in
+                .row
+                    .col-lg-8.mx-auto.text-center
+                        p.large.text-muted
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+
+        // Clients
+        div.py-5
+            .container
+                .row
+                    .col-md-3.col-sm-6.my-3
+                        a(href='#!')
+                            img.img-fluid.d-block.mx-auto(src='assets/img/logos/envato.jpg', alt='')
+                    .col-md-3.col-sm-6.my-3
+                        a(href='#!')
+                            img.img-fluid.d-block.mx-auto(src='assets/img/logos/designmodo.jpg', alt='')
+                    .col-md-3.col-sm-6.my-3
+                        a(href='#!')
+                            img.img-fluid.d-block.mx-auto(src='assets/img/logos/themeforest.jpg', alt='')
+                    .col-md-3.col-sm-6.my-3
+                        a(href='#!')
+                            img.img-fluid.d-block.mx-auto(src='assets/img/logos/creative-market.jpg', alt='')
+
+        // Contact
         section#contact.page-section
             .container
-                // Contact Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Contact Me
-                // Icon Divider
-                .divider-custom
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // Contact Section Form
-                .row
-                    .col-lg-8.mx-auto
-                        // To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
-                        form#contactForm(name='sentMessage', novalidate='novalidate')
-                            .control-group
-                                .form-group.floating-label-form-group.controls.mb-0.pb-2
-                                    label Name
-                                    input#name.form-control(type='text', placeholder='Name', required='required', data-validation-required-message='Please enter your name.')
-                                    p.help-block.text-danger
-                            .control-group
-                                .form-group.floating-label-form-group.controls.mb-0.pb-2
-                                    label Email Address
-                                    input#email.form-control(type='email', placeholder='Email Address', required='required', data-validation-required-message='Please enter your email address.')
-                                    p.help-block.text-danger
-                            .control-group
-                                .form-group.floating-label-form-group.controls.mb-0.pb-2
-                                    label Phone Number
-                                    input#phone.form-control(type='tel', placeholder='Phone Number', required='required', data-validation-required-message='Please enter your phone number.')
-                                    p.help-block.text-danger
-                            .control-group
-                                .form-group.floating-label-form-group.controls.mb-0.pb-2
-                                    label Message
-                                    textarea#message.form-control(rows='5', placeholder='Message', required='required', data-validation-required-message='Please enter a message.')
-                                    p.help-block.text-danger
-                            br
-                            #success
+                .text-center
+                    h2.section-heading.text-uppercase Contact Us
+                    h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+                form#contactForm(name='sentMessage', novalidate='novalidate')
+                    .row.align-items-stretch.mb-5
+                        .col-md-6
                             .form-group
-                                button#sendMessageButton.btn.btn-primary.btn-xl(type='submit') Send
+                                input#name.form-control(type='text', placeholder='Your Name *', required='required', data-validation-required-message='Please enter your name.')
+                                p.help-block.text-danger
+                            .form-group
+                                input#email.form-control(type='email', placeholder='Your Email *', required='required', data-validation-required-message='Please enter your email address.')
+                                p.help-block.text-danger
+                            .form-group.mb-md-0
+                                input#phone.form-control(type='tel', placeholder='Your Phone *', required='required', data-validation-required-message='Please enter your phone number.')
+                                p.help-block.text-danger
+                        .col-md-6
+                            .form-group.form-group-textarea.mb-md-0
+                                textarea#message.form-control(placeholder='Your Message *', required='required', data-validation-required-message='Please enter a message.')
+                                p.help-block.text-danger
+                    .text-center
+                            #success
+                            button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Send Message
 
         // Footer
-        footer.footer.text-center
+        footer.footer.py-4
             .container
-                .row
-                    // Footer Location
-                    .col-lg-4.mb-5.mb-lg-0
-                        h4.text-uppercase.mb-4 Location
-                        p.lead.mb-0
-                            | 2215 John Daniel Drive
-                            br
-                            | Clark, MO 65243
-                    // Footer Social Icons
-                    .col-lg-4.mb-5.mb-lg-0
-                        h4.text-uppercase.mb-4 Around the Web
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-facebook-f
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-twitter
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-linkedin-in
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-dribbble
-                    // Footer About Text
-                    .col-lg-4
-                        h4.text-uppercase.mb-4 About Freelancer
-                        p.lead.mb-0
-                            | Freelance is a free to use, MIT licensed Bootstrap theme created by 
-                            a(href='http://startbootstrap.com') Start Bootstrap
-                            | .
-        // Copyright Section
-        div.copyright.py-4.text-center.text-white
-            .container
-                small Copyright © Your Website 2020
-        // Scroll to Top Button (Only visible on small and extra-small screen sizes)
-        .scroll-to-top.d-lg-none.position-fixed
-            a.js-scroll-trigger.d-block.text-center.text-white.rounded(href='#page-top')
-                i.fa.fa-chevron-up
+                .row.align-items-center
+                    .col-lg-4.text-lg-left
+                        | Copyright © Your Website 2020
+                    .col-lg-4.my-3.my-lg-0
+                        a.btn.btn-dark.btn-social.mx-2(href='#!')
+                            i.fab.fa-twitter
+                        a.btn.btn-dark.btn-social.mx-2(href='#!')
+                            i.fab.fa-facebook-f
+                        a.btn.btn-dark.btn-social.mx-2(href='#!')
+                            i.fab.fa-linkedin-in
+                    .col-lg-4.text-lg-right
+                        a.mr-3(href='#!') Privacy Policy
+                        a(href='#!') Terms of Use
 
         // Portfolio Modals
-
-        // Portfolio Modal 1
-        #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal1Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
+        // Modal 1
+        #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
                 .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal1Label Log Cabin
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cabin.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-        // Portfolio Modal 2
-        #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal2Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
+                    .close-modal(data-dismiss='modal')
+                        img(src="assets/img/close-icon.svg", alt='Close modal')
+                    .container
+                        .row.justify-content-center
+                            .col-lg-8
+                                .modal-body
+                                    // Project Details Go Here
+                                    h2.text-uppercase Project Name
+                                    p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                                    img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/01-full.jpg', alt='')
+                                    p Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                                    ul.list-inline
+                                        li Date: January 2020
+                                        li Client: Threads
+                                        li Category: Illustration
+                                    button.btn.btn-primary(data-dismiss='modal', type='button')
+                                        i.fas.fa-times.mr-1
+                                        | Close Project
+        // Modal 2
+        #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
                 .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal2Label Tasty Cake
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cake.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-        // Portfolio Modal 3
-        #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal3Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
+                    .close-modal(data-dismiss='modal')
+                        img(src="assets/img/close-icon.svg", alt='Close modal')
+                    .container
+                        .row.justify-content-center
+                            .col-lg-8
+                                .modal-body
+                                    // Project Details Go Here
+                                    h2.text-uppercase Project Name
+                                    p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                                    img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/02-full.jpg', alt='')
+                                    p Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                                    ul.list-inline
+                                        li Date: January 2020
+                                        li Client: Explore
+                                        li Category: Graphic Design
+                                    button.btn.btn-primary(data-dismiss='modal', type='button')
+                                        i.fas.fa-times.mr-1
+                                        | Close Project
+        // Modal 3
+        #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
                 .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal3Label Circus Tent
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/circus.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-        // Portfolio Modal 4
-        #portfolioModal4.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal4Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
+                    .close-modal(data-dismiss='modal')
+                        img(src="assets/img/close-icon.svg", alt='Close modal')
+                    .container
+                        .row.justify-content-center
+                            .col-lg-8
+                                .modal-body
+                                    // Project Details Go Here
+                                    h2.text-uppercase Project Name
+                                    p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                                    img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/03-full.jpg', alt='')
+                                    p Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                                    ul.list-inline
+                                        li Date: January 2020
+                                        li Client: Finish
+                                        li Category: Identity
+                                    button.btn.btn-primary(data-dismiss='modal', type='button')
+                                        i.fas.fa-times.mr-1
+                                        | Close Project
+        // Modal 4
+        #portfolioModal4.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
                 .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal4Label Controller
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/game.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-        // Portfolio Modal 5
-        #portfolioModal5.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal5Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
+                    .close-modal(data-dismiss='modal')
+                        img(src="assets/img/close-icon.svg", alt='Close modal')
+                    .container
+                        .row.justify-content-center
+                            .col-lg-8
+                                .modal-body
+                                    // Project Details Go Here
+                                    h2.text-uppercase Project Name
+                                    p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                                    img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/04-full.jpg', alt='')
+                                    p Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                                    ul.list-inline
+                                        li Date: January 2020
+                                        li Client: Lines
+                                        li Category: Branding
+                                    button.btn.btn-primary(data-dismiss='modal', type='button')
+                                        i.fas.fa-times.mr-1
+                                        | Close Project
+        // Modal 5
+        #portfolioModal5.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
                 .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal5Label Locked Safe
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/safe.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-        // Portfolio Modal 6
-        #portfolioModal6.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal6Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
+                    .close-modal(data-dismiss='modal')
+                        img(src="assets/img/close-icon.svg", alt='Close modal')
+                    .container
+                        .row.justify-content-center
+                            .col-lg-8
+                                .modal-body
+                                    // Project Details Go Here
+                                    h2.text-uppercase Project Name
+                                    p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                                    img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/05-full.jpg', alt='')
+                                    p Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                                    ul.list-inline
+                                        li Date: January 2020
+                                        li Client: Southwest
+                                        li Category: Website Design
+                                    button.btn.btn-primary(data-dismiss='modal', type='button')
+                                        i.fas.fa-times.mr-1
+                                        | Close Project
+        // Modal 6
+        #portfolioModal6.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
                 .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal6Label Submarine
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/submarine.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
+                    .close-modal(data-dismiss='modal')
+                        img(src="assets/img/close-icon.svg", alt='Close modal')
+                    .container
+                        .row.justify-content-center
+                            .col-lg-8
+                                .modal-body
+                                    // Project Details Go Here
+                                    h2.text-uppercase Project Name
+                                    p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                                    img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/06-full.jpg', alt='')
+                                    p Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                                    ul.list-inline
+                                        li Date: January 2020
+                                        li Client: Window
+                                        li Category: Photography
+                                    button.btn.btn-primary(data-dismiss='modal', type='button')
+                                        i.fas.fa-times.mr-1
+                                        | Close Project
 
         // Bootstrap core JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')

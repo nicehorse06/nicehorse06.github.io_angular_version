@@ -32,3 +32,5 @@ ng deploy --base-href=/
 
 ## ref
 [angular-schule/angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) github部屬套件
+[Could not find module "@angular-devkit/build-angular"](https://stackoverflow.com/questions/50333003/could-not-find-module-angular-devkit-build-angular)
+[React Native Error: ENOSPC: System limit for number of file watchers reached](https://stackoverflow.com/questions/55763428/react-native-error-enospc-system-limit-for-number-of-file-watchers-reached)

@@ -1,7 +1,10 @@
 # 個人網站專案
-* 計畫要用github action把打包的dict放到首頁去
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+
+* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+
+## 開發使用
+* 建立新元件: ng generate component <component-name>
 
 ## Development server
 
@@ -26,6 +29,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
 
 ## 部屬專案
 ng deploy --base-href=/

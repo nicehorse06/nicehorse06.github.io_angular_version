@@ -1,7 +1,12 @@
 # 個人網站專案
 
-
 * This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+
+## TODO
+* 新增動畫nav button可以用動畫緩慢下滑
+    * 類似Jquery的效果
+* 新增css當下滑到一定距離，讓nac變成不透明
+
 
 ## 開發使用
 * 建立新元件: ng generate component <component-name>
